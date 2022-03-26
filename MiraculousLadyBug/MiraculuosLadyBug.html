@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html class="background" lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Miraculous LadyBug</title>
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Acme"
+      rel="stylesheet"
+      type="text/css"
+      crossorigin="anonymous"
+    />
+    <link href="Styles.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <!-- <div> -->
+    <!-- <img class="background_op" src="BackgroundLB.jpg" alt="LB"> -->
+    <!-- </div> -->
+
+    <div class="encabezado">
+      <img class="img-title" src="/Imágenes/Tìtulo.png" alt="titulo" />
+    </div>
+
+    <div id="nav">
+      <!-- Para crear un NavBar hay que crear una lista no ordenada -->
+      <nav class="navbar">
+        <ul>
+          <li>
+            <a href="MiraculuosLadyBug.html" style="text-decoration: none"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a href="temporadas.html" style="text-decoration: none"
+              >Temporadas</a
+            >
+          </li>
+          <li><a href="#" style="text-decoration: none">Peliculas</a></li>
+          <li><a href="#" style="text-decoration: none">Personajes</a></li>
+          <li><a href="#" style="text-decoration: none">About</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="box">
+      <h1>Bienvenidos Miraculers!</h1>
+      <h2>Este es un espacio para fans de Miraculous!</h2>
+
+      <img
+        class="fixed-image"
+        src="/Imágenes/Miraculous.png"
+        alt="Miraculous"
+      />
+    </div>
+
+    <!-- "script" hace referencia a JS, esto en realidad va en un archivo JS, es para dejar el navbar fijo al scrolear :3  -->
+    <script>
+      window.onscroll = function () {
+        myFunction();
+      };
+
+      var navbar = document.getElementById("nav");
+      var sticky = navbar.offsetTop;
+
+      function myFunction() {
+        if (window.pageYOffset >= sticky) {
+          navbar.classList.add("sticky");
+        } else {
+          navbar.classList.remove("sticky");
+        }
+      }
+    </script>
+  </body>
+</html>
